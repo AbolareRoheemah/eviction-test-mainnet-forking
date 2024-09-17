@@ -63,15 +63,15 @@ async function main() {
     //     deadline
     // );
 
-    // await ROUTER.addLiquidityETH(
-    //     USDC_Contract,
-    //     amountADesired,
-    //     amountAMin,
-    //     amountEthMin,
-    //     impersonatedSigner.address,
-    //     deadline,
-    //     { value: amountETHDesired }
-    // )
+    await ROUTER.addLiquidityETH(
+        USDC_Contract,
+        amountADesired,
+        amountAMin,
+        amountEthMin,
+        impersonatedSigner.address,
+        deadline,
+        { value: amountETHDesired }
+    )
 
     await ROUTER.swapTokensForExactETH(
         amountOut,
